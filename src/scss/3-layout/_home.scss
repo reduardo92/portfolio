@@ -60,7 +60,7 @@
   }
 
   &__title {
-    font-size: var(--fs-h1);
+    font-size: 7vw;
     font-weight: var(--fw-black);
     color: var(--clr-primary);
     letter-spacing: 2.5px;
@@ -106,6 +106,10 @@
 
     &__subtitle {
       font-size: 0.95rem;
+    }
+
+    &__title {
+      font-size: var(--fs-h1);
     }
   }
 }
