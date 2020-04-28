@@ -1,0 +1,92 @@
+// tablets & sm lapops
+
+// 900px
+@mixin mediaSmLandscape {
+  @media screen and (orientation: landscape) and (max-device-width: $size-900) {
+    @content;
+  }
+}
+// 700px
+@mixin mediaTablet {
+  @media screen and (min-width: $table) {
+    @content;
+  }
+}
+
+// 992px
+// LandScape tablets
+@mixin tabletLg {
+  @media only screen and (min-width: $table-lg) {
+    @content;
+  }
+}
+
+// 1392px
+// laptops
+@mixin mediaLaptop {
+  @media screen and (min-width: $laptop) {
+    @content;
+  }
+}
+
+// Transition one
+@mixin easeIn($pro: all) {
+  transition: $pro 0.27s ease-in;
+}
+
+// tranition
+@mixin cubicBezier($trans: all 0.4s cubic-bezier(0.22, 0.43, 0.35, 1.5)) {
+  transition: $trans;
+}
+
+// set all cross browser animation
+@mixin allAnimationKits($animation: '') {
+  animation: $animation;
+  -webkit-animation: $animation;
+  -moz-animation: $animation;
+}
+
+// BACKGROUND PROPERTY
+@mixin bgIMG($clr, $opa: 0.96) {
+  background: linear-gradient(rgba($clr, $opa), rgba($clr, $opa)),
+    url(../img/bg/blackBg2.jpg);
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+}
+
+@mixin divederLines {
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: 7.5em;
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 70%), 0 100%);
+    background-color: var(--clr-primary);
+  }
+
+  &::before {
+    top: 0;
+  }
+  &::after {
+    bottom: 0;
+    transform: scale(-1);
+  }
+}
+
+@mixin animateBg {
+  background: linear-gradient(
+    -65deg,
+    var(--clr-primary),
+    #c66034,
+    var(--clr-primary),
+    #c25729
+  );
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}

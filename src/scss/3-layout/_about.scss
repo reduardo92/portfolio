@@ -1,0 +1,150 @@
+.about {
+  @include bgIMG($clr-dark);
+}
+
+.about--content {
+  display: grid;
+  &__avatar {
+    position: relative;
+    width: 230px;
+    height: 250px;
+    margin: auto;
+    background-color: var(--clr-dark-light);
+    border: 0.7em solid rgba($clr-white, 0.04);
+    border-radius: 1px;
+    z-index: 1;
+    margin-bottom: 4em;
+    box-shadow: 1px 21px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+
+    .avatar--img {
+      background: url('../img/person7.jpg');
+      background-size: cover;
+      height: 100%;
+      width: 100%;
+      background-position: 5px 0%;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 7px;
+      left: -15px;
+      height: 103%;
+      width: 104%;
+      z-index: -1;
+      border-radius: 1px;
+      display: block;
+      outline: 0.7em solid rgba($clr-white, 0.04);
+      background-color: var(--clr-primary);
+      box-shadow: 1px 21px 15px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  &__email,
+  &__phone,
+  &__links,
+  .btn {
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+  }
+
+  &__phone {
+    margin: 1em 2.8em 1em 0;
+  }
+
+  &__email,
+  &__phone {
+    a {
+      margin-right: 0.5em;
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    a {
+      margin: 1em 0.7em;
+    }
+  }
+}
+
+@include mediaTablet {
+  .about {
+    padding-top: 15em;
+  }
+
+  .about--content {
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: auto;
+    justify-items: start;
+    grid-gap: 0.8em 0.5em;
+    gap: 0.8em 0.5em;
+
+    &__avatar {
+      grid-area: 1/ 1 / 4 / 2;
+      width: 300px;
+      height: 100%;
+      border: 0.7em solid rgba($clr-white, 0.04);
+      margin-bottom: 0;
+      margin-right: 2em;
+    }
+
+    &__text {
+      grid-column: 2 / -1;
+
+      .para {
+        margin-bottom: 0.5em;
+      }
+    }
+
+    &__links {
+      grid-area: 3 /3 / 4/ 5;
+      margin: 0;
+
+      a {
+        margin: 0 0.7em;
+      }
+    }
+
+    &__phone {
+      grid-area: 2/ 3/ 3/ 5;
+      margin: 0;
+    }
+
+    &__email,
+    &__phone {
+      justify-self: center;
+      a {
+        margin-right: 0.3em;
+      }
+    }
+
+    .btn {
+      justify-self: start;
+      margin: 0;
+    }
+  }
+}
+
+@include tabletLg {
+  .about--content {
+    &__avatar {
+      width: 400px;
+      height: 450px;
+    }
+
+    &__text {
+      max-width: 700px;
+    }
+
+    &__links {
+      grid-area: 2 / 4 / 3 / 5;
+    }
+
+    &__phone {
+      grid-area: 2/ 3/ 3/ 4;
+    }
+  }
+}

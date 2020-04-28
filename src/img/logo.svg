@@ -1,0 +1,12 @@
+<svg width="47" height="47" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="logo">
+<g id="lines">
+<path id="line3" d="M40 10.2982H8V14.0701H24H40V10.2982Z" fill="#EB7F51"/>
+<path id="line2" d="M25.3913 20.8596H8V24.6315H16.6957H25.3913V20.8596Z" fill="#EB7F51"/>
+<path id="line1" d="M40 31.421H8V35.193H24H40V31.421Z" fill="#EB7F51"/>
+</g>
+<g id="outline">
+<path id="outline_2" d="M45 10.2982V2H2V45H45V35.193" stroke="white" stroke-width="4"/>
+</g>
+</g>
+</svg>
