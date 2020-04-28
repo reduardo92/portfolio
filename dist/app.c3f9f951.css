@@ -186,6 +186,9 @@ html {
 body {
   height: 100%; }
 
+main {
+  overflow-x: hidden; }
+
 p {
   font-family: "Open Sans", sans-serif;
   line-height: 1.6; }
@@ -329,26 +332,6 @@ input {
   100% {
     background-position: 0% 50%; } }
 
-.fallow--curser {
-  position: absolute;
-  border: 2px solid var(--clr-white);
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: 1000; }
-
-.cursor-animate {
-  border-color: var(--clr-primary);
-  border-top-color: rgba(235, 127, 81, 0.05);
-  border-bottom-color: rgba(235, 127, 81, 0.05);
-  height: 2rem;
-  width: 2rem;
-  animation: pulse 0.7s linear infinite alternate;
-  -webkit-animation: pulse 0.7s linear infinite alternate;
-  -moz-animation: pulse 0.7s linear infinite alternate; }
-
 @-webkit-keyframes pulse {
   from {
     -webkit-transform: scale(1) translate(-50%, -50%) rotate(0deg);
@@ -409,6 +392,26 @@ input {
     -webkit-transform: scale(0.8);
     transform: scale(0.8);
     opacity: 0.5; } }
+
+@media only screen and (min-width: 62em) {
+  .fallow--curser {
+    position: absolute;
+    border: 2px solid var(--clr-white);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 1000; }
+  .cursor-animate {
+    border-color: var(--clr-primary);
+    border-top-color: rgba(235, 127, 81, 0.05);
+    border-bottom-color: rgba(235, 127, 81, 0.05);
+    height: 2rem;
+    width: 2rem;
+    animation: pulse 0.7s linear infinite alternate;
+    -webkit-animation: pulse 0.7s linear infinite alternate;
+    -moz-animation: pulse 0.7s linear infinite alternate; } }
 
 .portfolio {
   background: linear-gradient(rgba(36, 40, 61, 0.98), rgba(36, 40, 61, 0.98)), url(/blackBg2.fcc134aa.jpg);

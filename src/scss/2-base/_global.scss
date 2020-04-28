@@ -21,6 +21,10 @@ body {
   height: 100%;
 }
 
+main {
+  overflow-x: hidden;
+}
+
 p {
   font-family: $f-second;
   line-height: 1.6;
@@ -214,27 +218,6 @@ input {
   }
 }
 
-// Curser Styles
-.fallow--curser {
-  position: absolute;
-  border: 2px solid var(--clr-white);
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: 1000;
-}
-
-.cursor-animate {
-  border-color: var(--clr-primary);
-  border-top-color: rgba($clr-primary, 0.05);
-  border-bottom-color: rgba($clr-primary, 0.05);
-  height: 2rem;
-  width: 2rem;
-  @include allAnimationKits(pulse 0.7s linear infinite alternate);
-}
-
 @-webkit-keyframes pulse {
   from {
     -webkit-transform: scale(1) translate(-50%, -50%) rotate(0deg);
@@ -311,5 +294,28 @@ input {
     -webkit-transform: scale(0.8);
     transform: scale(0.8);
     opacity: 0.5;
+  }
+}
+
+@include tabletLg {
+  // Curser Styles
+  .fallow--curser {
+    position: absolute;
+    border: 2px solid var(--clr-white);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 1000;
+  }
+
+  .cursor-animate {
+    border-color: var(--clr-primary);
+    border-top-color: rgba($clr-primary, 0.05);
+    border-bottom-color: rgba($clr-primary, 0.05);
+    height: 2rem;
+    width: 2rem;
+    @include allAnimationKits(pulse 0.7s linear infinite alternate);
   }
 }
