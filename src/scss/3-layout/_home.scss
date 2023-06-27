@@ -38,6 +38,7 @@
 .hero--content {
   padding: 0 2em;
   z-index: 1;
+  
   &__avatar {
     width: 160px;
     height: 160px;
@@ -50,7 +51,7 @@
     overflow: hidden;
 
     .avatar--img {
-      background: url('../img/person5.jpg');
+      background: url('../img/avatar.png');
       background-size: cover;
       height: 100%;
       width: 100%;
