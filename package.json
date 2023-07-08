@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "my portfolio ",
   "scripts": {
-    "sass": "dart-sass -w scss/ -o dist/css/ --recursive",
+    "sass": "sass -w scss/ -o dist/css/ --recursive",
     "dev": "parcel src/index.html",
     "build": "parcel build src/index.html"
   },
@@ -13,8 +13,10 @@
     "@parcel/transformer-sass": "^2.9.3",
     "parcel": "^2.9.3"
   },
-  "dependencies": {
-    "dart-sass": "^1.25.0"
+  "alias": {
+    "process": false
   },
-  "alias": { "process": false }
+  "dependencies": {
+    "sass": "^1.63.6"
+  }
 }
